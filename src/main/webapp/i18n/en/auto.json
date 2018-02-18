@@ -1,0 +1,22 @@
+{
+    "mehanicarApp": {
+        "auto" : {
+            "home": {
+                "title": "Autos",
+                "createLabel": "Create a new Auto",
+                "createOrEditLabel": "Create or edit a Auto"
+            },
+            "created": "A new Auto is created with identifier {{ param }}",
+            "updated": "A Auto is updated with identifier {{ param }}",
+            "deleted": "A Auto is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Auto {{ id }}?"
+            },
+            "detail": {
+                "title": "Auto"
+            },
+            "color": "Color",
+            "length": "Length"
+        }
+    }
+}

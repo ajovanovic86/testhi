@@ -1,0 +1,25 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "color",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "length",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "min"
+            ],
+            "fieldValidateRulesMin": "2"
+        }
+    ],
+    "changelogDate": "20180128223957",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "auto",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

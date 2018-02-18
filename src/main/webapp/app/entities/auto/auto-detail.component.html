@@ -1,0 +1,30 @@
+
+<div *ngIf="auto">
+    <h2><span jhiTranslate="mehanicarApp.auto.detail.title">Auto</span> {{auto.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="mehanicarApp.auto.color">Color</span></dt>
+        <dd>
+            <span>{{auto.color}}</span>
+        </dd>
+        <dt><span jhiTranslate="mehanicarApp.auto.length">Length</span></dt>
+        <dd>
+            <span>{{auto.length}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'auto/'+ auto.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>
