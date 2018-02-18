@@ -1,0 +1,31 @@
+
+
+entity Automobile {
+	color String
+}
+
+entity AutoTip {
+	brandName String,
+    model String
+}
+
+entity Claim {
+	description String,
+    date Instant
+}
+
+
+relationship OneToOne {
+	Automobile{autoTip} to AutoTip
+}
+
+relationship OneToMany {
+	Automobile{claim} to Claim
+}
+
+dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl 
+// Set an angular suffix
+

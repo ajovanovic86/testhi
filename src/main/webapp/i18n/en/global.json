@@ -8,6 +8,9 @@
             "entities": {
                 "main": "Entities",
                 "auto": "Auto",
+                "automobile": "Automobile",
+                "autoTip": "Auto Tip",
+                "claim": "Claim",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

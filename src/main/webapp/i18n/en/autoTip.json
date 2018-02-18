@@ -1,0 +1,22 @@
+{
+    "mehanicarApp": {
+        "autoTip" : {
+            "home": {
+                "title": "Auto Tips",
+                "createLabel": "Create a new Auto Tip",
+                "createOrEditLabel": "Create or edit a Auto Tip"
+            },
+            "created": "A new Auto Tip is created with identifier {{ param }}",
+            "updated": "A Auto Tip is updated with identifier {{ param }}",
+            "deleted": "A Auto Tip is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Auto Tip {{ id }}?"
+            },
+            "detail": {
+                "title": "Auto Tip"
+            },
+            "brandName": "Brand Name",
+            "model": "Model"
+        }
+    }
+}

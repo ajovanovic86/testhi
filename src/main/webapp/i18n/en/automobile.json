@@ -1,0 +1,23 @@
+{
+    "mehanicarApp": {
+        "automobile" : {
+            "home": {
+                "title": "Automobiles",
+                "createLabel": "Create a new Automobile",
+                "createOrEditLabel": "Create or edit a Automobile"
+            },
+            "created": "A new Automobile is created with identifier {{ param }}",
+            "updated": "A Automobile is updated with identifier {{ param }}",
+            "deleted": "A Automobile is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Automobile {{ id }}?"
+            },
+            "detail": {
+                "title": "Automobile"
+            },
+            "color": "Color",
+            "autoTip": "Auto Tip",
+            "claim": "Claim"
+        }
+    }
+}

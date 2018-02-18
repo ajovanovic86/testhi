@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Automobile.
+    -->
+    <changeSet id="20180218152226-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="auto_tip_id"
+                                 baseTableName="automobile"
+                                 constraintName="fk_automobile_auto_tip_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auto_tip"/>
+
+    </changeSet>
+</databaseChangeLog>

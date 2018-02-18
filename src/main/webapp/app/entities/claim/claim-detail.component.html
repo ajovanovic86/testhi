@@ -1,0 +1,36 @@
+
+<div *ngIf="claim">
+    <h2><span jhiTranslate="mehanicarApp.claim.detail.title">Claim</span> {{claim.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="mehanicarApp.claim.description">Description</span></dt>
+        <dd>
+            <span>{{claim.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="mehanicarApp.claim.date">Date</span></dt>
+        <dd>
+            <span>{{claim.date | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="mehanicarApp.claim.automobile">Automobile</span></dt>
+        <dd>
+            <div *ngIf="claim.automobileId">
+                <a [routerLink]="['/automobile', claim.automobileId]">{{claim.automobileId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'claim/'+ claim.id + '/edit'} }]"
+            replaceUrl="true"
+            queryParamsHandling="merge"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

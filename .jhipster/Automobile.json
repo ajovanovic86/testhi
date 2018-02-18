@@ -1,0 +1,31 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "relationshipName": "autoTip",
+            "otherEntityName": "autoTip",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "automobile"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "claim",
+            "otherEntityName": "claim",
+            "otherEntityRelationshipName": "automobile"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "color",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20180218152226",
+    "entityTableName": "automobile",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false
+}

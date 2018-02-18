@@ -1,0 +1,66 @@
+<div>
+    <h2>
+        <span jhiTranslate="mehanicarApp.claim.home.title">Claims</span>
+        <button class="btn btn-primary float-right jh-create-entity create-claim" [routerLink]="['/', { outlets: { popup: ['claim-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="mehanicarApp.claim.home.createLabel">
+            Create new Claim
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="claims">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="mehanicarApp.claim.description">Description</span></th>
+            <th><span jhiTranslate="mehanicarApp.claim.date">Date</span></th>
+            <th><span jhiTranslate="mehanicarApp.claim.automobile">Automobile</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let claim of claims ;trackBy: trackId">
+                <td><a [routerLink]="['../claim', claim.id ]">{{claim.id}}</a></td>
+                <td>{{claim.description}}</td>
+                <td>{{claim.date | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="claim.automobileId">
+                        <a [routerLink]="['../automobile', claim.automobileId  ]" >{{claim.automobileId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../claim', claim.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'claim/'+ claim.id + '/edit'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'claim/'+ claim.id + '/delete'} }]"
+                                replaceUrl="true"
+                                queryParamsHandling="merge"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
